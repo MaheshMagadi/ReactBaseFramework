@@ -1,0 +1,50 @@
+{
+    "source": "./src",
+    "destination": "./Appl-doc",
+    "includes": [
+        ".*\\.js",
+        ".*\\.jsx"
+    ],
+    "plugins": [
+        {"name": "esdoc-exclude-source-plugin"},
+ 
+        {
+            "name": "esdoc-integrate-manual-plugin",
+            "option": {
+              "index": "./config/docConfig/manual/index.md",
+              "globalIndex": true,
+             
+              "files": [
+                "./config/docConfig/manual/overview.md",
+                "./config/docConfig/manual/design.md",
+                "./config/docConfig/manual/installation.md",
+                "./config/docConfig/manual/usage1.md",
+                "./config/docConfig/manual/usage2.md",
+                "./config/docConfig/manual/tutorial.md",
+                "./config/docConfig/manual/configuration.md",
+                "./config/docConfig/manual/example.md",
+                "./config/docConfig/manual/advanced.md",
+                "./config/docConfig/manual/faq.md"
+     
+              ]
+            }
+          },
+        {
+            "name": "esdoc-standard-plugin",
+            "option": {
+                "lint": {"enable": true},
+                "coverage": {"enable": true},
+                "brand": {
+                    "title": "React Document"
+                    
+                }
+            }
+        },
+        {
+            "name": "esdoc-jsx-plugin",
+            "option": {
+                "enable": true
+            }
+        }
+    ]
+}
